@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+
+* {box-sizing: border-box;}
+
+body {font-family: 'Times New Roman', Times, serif;
+  background-image: url(https://motionarray.imgix.net/preview-186299-2v5xm9Ejmi-high_0008.jpg?w=660&q=60&fit=max&auto=format);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: 10%;
+  color: white;}
+
+/* Style the header */
+.header 
+{
+  background-color: #ea1313;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+  color: antiquewhite;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #700404;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddddddb5;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ea1313;
+    color: white;
+  }
+
+
+/* Create three equal columns that floats next to each other */
+.column 
+{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 15px;
+
+}
+
+
+.column img 
+{
+    float: left;
+    padding-right: 10px;
+    border: white solid 5px;
+    border-radius: 5px;
+    margin: 2%;
+    background-color: white;
+    
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer 
+{
+  background-color: #f6d70a;
+  color: antiquewhite;
+  padding: 10px;
+  text-align: center;
+}
+
+p {background-color: #700404;
+padding: 15px;
+margin: 1em;
+border-radius: 5px;}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) 
+{
+iframe {width: 50%;}
+.column {width: 100%;}
+}
