@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+
+body 
+{
+background: url(Images/tv.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+.wrapper 
+{
+display: grid;  
+justify-items: auto;
+gap: 1em;
+grid-template-columns: 30% 40% 30%;
+grid-template-areas:
+    "header header header"
+    "topnav topnav topnav"
+    "sidebar content sidebar2"
+    "footer footer footer";
+
+
+color: #444;
+padding: 0 175px 0 110px;
+margin: 0;
+position: relative;
+}
+
+.header 
+{
+grid-area: header;
+background-color: white;
+}
+
+.topnav 
+{
+grid-area: topnav;
+}
+
+.sidebar 
+{
+display: grid;
+grid-area: sidebar;
+background-color: white;
+}
+
+.content 
+{
+grid-area: content;
+background-color: white;
+}
+
+.sidebar2 
+{
+grid-area: sidebar2;
+background-color: white;
+}
+
+.footer 
+{
+grid-area: footer;
+}
+
+.box 
+{
+background-color: white;
+color: #444;
+border-radius: 5px;
+padding: 10px;
+font-size: 1em;
+}
+
+.header, .footer 
+{
+background-color: white;
+justify-items: center;
+}
+
+.header 
+{
+background-color: transparent;
+}
+
+.sidebar li 
+{
+list-style-type:none ;
+}
+.sidebar 
+{
+a:link, a:visited {color: red;}
+a:focus, a:hover, a:active {color: #444;}
+}
+
+.sidebar2 
+{
+background-color: white;
+color: #444;
+}
+
+.imgsize 
+{
+max-width: 50vw;
+height: auto;
+display: flex;
+border: white, solid 20px;
+border-radius: 5px;
+}
+
+.flex 
+{
+ display: flex;   
+ justify-content: center;
+}
+
+a:link, a:visited {color: red;}
+a:focus, a:hover, a:active {color: #444;}
+
+@media only screen and (max-width:1000px) 
+{
+
+    .wrapper 
+{
+display: grid;
+grid-gap: 1em;
+grid-template-columns: 50% 50%;
+grid-template-areas: 
+"header header"
+"topnav topnav"
+"sidebar content"
+"sidever2 sidebar2"
+"footer     footer";
+}
+
+.box 
+{
+font-size: 1em;
+background-color: white;
+}
+
+.flex 
+{
+flex-wrap: nowrap;
+}
+}
+
+@media only screen and (max-width: 800px)
+{
+.wrapper 
+{
+display: block;
+width: 100%;
+}
+
+.box
+{
+float: left;
+width: 100%;
+font-size: 1em;
+background-color: white;
+}
+
+.imgsize 
+{
+display:flex ;
+justify-content: center;
+}
+
+.topnav
+{
+display: block;
+font-size: 1em;
+text-align: center;
+}
+
+}
+
+@media only screen and (max-width: 700px)
+{
+.topnav a {display: block;}
+.box {border-radius: 0%;}
+}
+
